@@ -211,21 +211,21 @@ const AppSection = () => (
         <p className="text-lg text-muted-foreground">Toda a gestão do seu negócio na palma da mão</p>
       </motion.div>
 
+      {/* Desktop: side by side */}
       <motion.div
-        className="flex items-end justify-center gap-4 md:gap-8 mb-10"
+        className="hidden sm:flex items-end justify-center gap-4 md:gap-8 mb-10"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.15 }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        <div className="hidden sm:block">
-          <ProductsScreen />
-        </div>
+        <ProductsScreen />
         <DashboardScreen />
-        <div className="hidden sm:block">
-          <OperationsScreen />
-        </div>
+        <OperationsScreen />
       </motion.div>
+
+      {/* Mobile: carousel */}
+      <MobileCarousel />
 
       <div className="text-center">
         <button className="border-2 border-primary text-foreground text-lg font-bold uppercase tracking-wider px-10 py-4 rounded-full hover:-translate-y-0.5 hover:shadow-md transition-all duration-200">
