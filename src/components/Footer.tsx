@@ -26,7 +26,7 @@ const Footer = () => {
           ))}
         </div>
         <div className="flex gap-3 justify-center mb-6">
-          <a href="#" className="w-8 h-8 rounded-full bg-background/10 flex items-center justify-center hover:bg-background/20 transition-colors">
+          <a href="https://www.instagram.com/simploucomvoce/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-background/10 flex items-center justify-center hover:bg-background/20 transition-colors">
             <Instagram className="w-3.5 h-3.5 text-background/60" />
           </a>
           <a href="#" className="w-8 h-8 rounded-full bg-background/10 flex items-center justify-center hover:bg-background/20 transition-colors">
