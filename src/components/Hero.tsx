@@ -40,7 +40,7 @@ const Hero = () => {
         </motion.p>
         <motion.button
           onClick={() => scrollTo("cta")}
-          className="bg-brand-dark text-background text-lg font-bold uppercase tracking-wider px-12 py-5 rounded-full hover:-translate-y-0.5 hover:shadow-lg transition-all duration-200"
+          className="bg-brand-dark text-background text-sm md:text-lg font-bold uppercase tracking-wider px-8 py-3.5 md:px-12 md:py-5 rounded-full hover:-translate-y-0.5 hover:shadow-lg transition-all duration-200"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.5, ease: "easeOut" }}
