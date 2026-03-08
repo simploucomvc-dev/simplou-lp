@@ -18,21 +18,14 @@ const Hero = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
         />
         <motion.p
-          className="text-2xl md:text-3xl font-bold italic text-primary-foreground/80 mb-4"
+          className="text-lg md:text-xl text-primary-foreground/60 max-w-lg mx-auto mb-10 leading-relaxed"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.5, ease: "easeOut" }}
         >
-          Simplou, cresceu!
-        </motion.p>
-        <motion.p
-          className="text-lg md:text-xl text-primary-foreground/60 max-w-lg mx-auto mb-10 leading-relaxed"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.5, ease: "easeOut" }}
-        >
           Empreender já é bem complicado pra gestão ainda ter que ser um peso.
-          A gente acredita que organizar o negócio pode ser simples, leve e até divertido.
+          A gente acredita que organizar o negócio pode ser simples, leve e até divertido.{" "}
+          <span className="italic font-bold text-primary-foreground/80">Simplou, cresceu!</span>
         </motion.p>
         <motion.button
           onClick={() => scrollTo("cta")}
