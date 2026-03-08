@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import logo from "@/assets/simplou-logo.png";
+import logoMobile from "@/assets/simplou-logo-mobile.png";
 
 const Hero = () => {
   const scrollTo = (id: string) => {
@@ -9,10 +10,20 @@ const Hero = () => {
   return (
     <section id="hero" className="bg-gradient-to-br from-primary to-[hsl(82,70%,42%)] min-h-screen flex items-center justify-center relative">
       <div className="container text-center py-32">
+        {/* Mobile/tablet logo */}
+        <motion.img
+          src={logoMobile}
+          alt="Simplou"
+          className="md:hidden w-[80%] max-w-[360px] mx-auto mb-8 object-contain"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        />
+        {/* Desktop logo */}
         <motion.img
           src={logo}
           alt="Simplou"
-          className="w-[70%] max-w-[320px] md:w-auto md:max-w-none md:h-28 lg:h-32 mx-auto mb-8 object-contain"
+          className="hidden md:block md:h-28 lg:h-32 mx-auto mb-8 object-contain"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
@@ -29,7 +40,7 @@ const Hero = () => {
         </motion.p>
         <motion.button
           onClick={() => scrollTo("cta")}
-          className="bg-brand-dark text-background text-lg font-bold uppercase tracking-wider px-12 py-5 rounded-full hover:-translate-y-0.5 hover:shadow-lg transition-all duration-200"
+          className="bg-brand-dark text-background text-sm md:text-lg font-bold uppercase tracking-wider px-8 py-3.5 md:px-12 md:py-5 rounded-full hover:-translate-y-0.5 hover:shadow-lg transition-all duration-200"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.5, ease: "easeOut" }}
