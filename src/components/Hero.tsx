@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import logo from "@/assets/simplou-logo.png";
+import logoMobile from "@/assets/simplou-logo-mobile.png";
 
 const Hero = () => {
   const scrollTo = (id: string) => {
