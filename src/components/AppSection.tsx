@@ -208,17 +208,21 @@ const MobileCarousel = () => {
           <ChevronLeft className="w-6 h-6 text-foreground" />
         </button>
 
-        <div className="flex justify-center w-[220px]">
-          {screens.map((screen, i) => (
-            <div
-              key={i}
-              className={`w-[220px] flex-shrink-0 flex justify-center py-2 transition-opacity duration-300 ${
-                i === active ? "block" : "hidden"
-              }`}
-            >
-              {screen}
-            </div>
-          ))}
+        <div className="overflow-hidden w-[220px]">
+          <div
+            className="flex transition-transform duration-300 ease-in-out"
+            style={{ transform: `translateX(-${active * 220}px)` }}
+          >
+            {screens.map((screen, i) => (
+              <div
+                key={i}
+                className="w-[220px] flex-shrink-0 flex justify-center py-2 transition-opacity duration-300"
+                style={{ opacity: i === active ? 1 : 0 }}
+              >
+                {screen}
+              </div>
+            ))}
+          </div>
         </div>
 
         <button
