@@ -280,8 +280,10 @@ const AppSection = () => (
         <OperationsScreen />
       </motion.div>
 
-      {/* Mobile: carousel */}
-      <MobileCarousel />
+      {/* Mobile: single dashboard */}
+      <div className="sm:hidden flex justify-center mb-10">
+        <DashboardScreen />
+      </div>
 
       <div className="text-center">
         <button className="border-2 border-primary text-foreground text-lg font-bold uppercase tracking-wider px-10 py-4 rounded-full hover:-translate-y-0.5 hover:shadow-md transition-all duration-200">
