@@ -35,7 +35,7 @@ const Footer = () => {
             </svg>
           </a>
         </div>
-        <p className="text-[11px] text-background/30">© 2025 Simplou. Todos os direitos reservados.</p>
+        <p className="text-[11px] text-background/30">© 2026 Simplou. Todos os direitos reservados.</p>
       </div>
     </footer>
   );
