@@ -40,7 +40,7 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-8">
           <button
             onClick={() => scrollTo("servicos")}
-            className={`text-xs font-semibold uppercase tracking-widest transition-colors ${
+            className={`text-[15px] font-semibold uppercase tracking-widest transition-colors ${
               scrolled ? "text-foreground/70 hover:text-foreground" : "text-background/80 hover:text-background"
             }`}
           >
@@ -48,7 +48,7 @@ const Navbar = () => {
           </button>
           <button
             onClick={() => scrollTo("app")}
-            className={`text-xs font-semibold uppercase tracking-widest transition-colors ${
+            className={`text-[15px] font-semibold uppercase tracking-widest transition-colors ${
               scrolled ? "text-foreground/70 hover:text-foreground" : "text-background/80 hover:text-background"
             }`}
           >
@@ -56,7 +56,7 @@ const Navbar = () => {
           </button>
           <button
             onClick={() => scrollTo("faq")}
-            className={`text-xs font-semibold uppercase tracking-widest transition-colors ${
+            className={`text-[15px] font-semibold uppercase tracking-widest transition-colors ${
               scrolled ? "text-foreground/70 hover:text-foreground" : "text-background/80 hover:text-background"
             }`}
           >
@@ -64,7 +64,7 @@ const Navbar = () => {
           </button>
           <button
             onClick={() => scrollTo("cta")}
-            className="bg-primary text-primary-foreground text-xs font-bold uppercase tracking-wider px-6 py-2.5 rounded-full hover:-translate-y-0.5 hover:shadow-md transition-all duration-200"
+            className="bg-primary text-primary-foreground text-[15px] font-bold uppercase tracking-wider px-6 py-2.5 rounded-full hover:-translate-y-0.5 hover:shadow-md transition-all duration-200"
           >
             Agendar
           </button>
@@ -86,12 +86,12 @@ const Navbar = () => {
       {/* Mobile menu */}
       {menuOpen && (
         <div className="md:hidden bg-background border-t border-border px-6 py-6 flex flex-col gap-4">
-          <button onClick={() => scrollTo("servicos")} className="text-sm font-semibold uppercase tracking-wider text-foreground/70 text-left">Consultoria</button>
-          <button onClick={() => scrollTo("app")} className="text-sm font-semibold uppercase tracking-wider text-foreground/70 text-left">App</button>
-          <button onClick={() => scrollTo("faq")} className="text-sm font-semibold uppercase tracking-wider text-foreground/70 text-left">FAQ</button>
+          <button onClick={() => scrollTo("servicos")} className="text-base font-semibold uppercase tracking-wider text-foreground/70 text-left">Consultoria</button>
+          <button onClick={() => scrollTo("app")} className="text-base font-semibold uppercase tracking-wider text-foreground/70 text-left">App</button>
+          <button onClick={() => scrollTo("faq")} className="text-base font-semibold uppercase tracking-wider text-foreground/70 text-left">FAQ</button>
           <button
             onClick={() => scrollTo("cta")}
-            className="bg-primary text-primary-foreground text-sm font-bold uppercase tracking-wider px-6 py-3 rounded-full text-center mt-2"
+            className="bg-primary text-primary-foreground text-base font-bold uppercase tracking-wider px-6 py-3 rounded-full text-center mt-2"
           >
             Agendar
           </button>

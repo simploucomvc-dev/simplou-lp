@@ -18,33 +18,36 @@ const FAQ = () => (
   <section id="faq" className="bg-background section-padding">
     <div className="container max-w-2xl">
       <motion.h2
-        className="text-2xl md:text-3xl font-extrabold text-foreground text-center mb-10"
-        initial={{ opacity: 0, y: 20 }}
+        className="text-3xl md:text-4xl font-extrabold text-foreground text-center mb-10"
+        initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-80px" }}
-        transition={{ duration: 0.5 }}
+        viewport={{ once: true, amount: 0.15 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
       >
         DÚVIDAS FREQUENTES
       </motion.h2>
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-60px" }}
-        transition={{ duration: 0.5, delay: 0.1 }}
-      >
+      <div>
         <Accordion type="single" collapsible className="space-y-2">
           {faqs.map((f, i) => (
-            <AccordionItem key={i} value={`item-${i}`} className="border border-border px-6 data-[state=open]:border-primary/40">
-              <AccordionTrigger className="text-sm font-semibold text-foreground hover:no-underline py-5">
-                {f.q}
-              </AccordionTrigger>
-              <AccordionContent className="text-sm text-muted-foreground leading-relaxed pb-5">
-                {f.a}
-              </AccordionContent>
-            </AccordionItem>
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{ duration: 0.4, delay: i * 0.08, ease: "easeOut" }}
+            >
+              <AccordionItem value={`item-${i}`} className="border border-border px-6 data-[state=open]:border-primary/40">
+                <AccordionTrigger className="text-lg font-semibold text-foreground hover:no-underline py-5">
+                  {f.q}
+                </AccordionTrigger>
+                <AccordionContent className="text-base text-muted-foreground leading-relaxed pb-5">
+                  {f.a}
+                </AccordionContent>
+              </AccordionItem>
+            </motion.div>
           ))}
         </Accordion>
-      </motion.div>
+      </div>
     </div>
   </section>
 );
