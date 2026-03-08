@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import {
   Home, Package, CircleDollarSign, Search, Bell, Plus,

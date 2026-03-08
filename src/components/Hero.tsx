@@ -12,7 +12,7 @@ const Hero = () => {
         <motion.img
           src={logo}
           alt="Simplou"
-          className="h-20 md:h-28 lg:h-32 mx-auto mb-8"
+          className="w-[70%] max-w-[320px] md:w-auto md:max-w-none md:h-28 lg:h-32 mx-auto mb-8 object-contain"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
