@@ -193,6 +193,58 @@ const OperationsScreen = () => (
   </PhoneShell>
 );
 
+/* ── Mobile Carousel ── */
+const MobileCarousel = () => {
+  const [active, setActive] = useState(1); // 0=Products, 1=Dashboard, 2=Operations
+  const screens = [<ProductsScreen />, <DashboardScreen />, <OperationsScreen />];
+
+  return (
+    <div className="sm:hidden mb-10">
+      <div className="relative flex items-center justify-center">
+        <button
+          onClick={() => setActive((p) => Math.max(0, p - 1))}
+          className={`absolute left-0 z-10 p-1 ${active === 0 ? "opacity-20 pointer-events-none" : "opacity-60 hover:opacity-100"} transition-opacity`}
+        >
+          <ChevronLeft className="w-6 h-6 text-foreground" />
+        </button>
+
+        <div className="overflow-hidden w-[220px]">
+          <div
+            className="flex transition-transform duration-300 ease-in-out"
+            style={{ transform: `translateX(-${active * 220}px)` }}
+          >
+            {screens.map((screen, i) => (
+              <div key={i} className="w-[220px] flex-shrink-0 flex justify-center">
+                {screen}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <button
+          onClick={() => setActive((p) => Math.min(2, p + 1))}
+          className={`absolute right-0 z-10 p-1 ${active === 2 ? "opacity-20 pointer-events-none" : "opacity-60 hover:opacity-100"} transition-opacity`}
+        >
+          <ChevronRight className="w-6 h-6 text-foreground" />
+        </button>
+      </div>
+
+      {/* Dots */}
+      <div className="flex justify-center gap-2 mt-4">
+        {[0, 1, 2].map((i) => (
+          <button
+            key={i}
+            onClick={() => setActive(i)}
+            className={`w-2 h-2 rounded-full transition-colors ${
+              i === active ? "bg-primary" : "bg-foreground/20"
+            }`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
 /* ── Section ── */
 const AppSection = () => (
   <section id="app" className="bg-section-alt section-padding">
