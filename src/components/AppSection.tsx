@@ -43,12 +43,12 @@ const StatusBar = () => (
 /* ── Phone shell ── */
 const PhoneShell = ({ children, large = false }: { children: React.ReactNode; large?: boolean }) => (
   <div
-    className={`rounded-[28px] bg-brand-dark p-[3px] ${
-      large ? "w-[190px] md:w-[210px] -translate-y-4" : "w-[155px] md:w-[170px]"
+    className={`rounded-[28px] border border-border p-[2px] ${
+      large ? "w-[190px] md:w-[210px] md:-translate-y-4" : "w-[155px] md:w-[170px]"
     }`}
-    style={{ boxShadow: "0 20px 60px rgba(0,0,0,0.12)" }}
+    style={{ boxShadow: "0 8px 32px rgba(0,0,0,0.08)" }}
   >
-    <div className="bg-background rounded-[25px] flex flex-col overflow-hidden" style={{ minHeight: large ? 340 : 280 }}>
+    <div className="bg-background rounded-[26px] flex flex-col overflow-hidden" style={{ minHeight: large ? 320 : 260 }}>
       {children}
     </div>
   </div>
@@ -199,22 +199,22 @@ const MobileCarousel = () => {
   const screens = [<ProductsScreen />, <DashboardScreen />, <OperationsScreen />];
 
   return (
-    <div className="sm:hidden mb-10">
-      <div className="relative flex items-center justify-center">
+    <div className="sm:hidden mb-10 pb-4">
+      <div className="relative flex items-center justify-center py-4">
         <button
           onClick={() => setActive((p) => Math.max(0, p - 1))}
-          className={`absolute left-0 z-10 p-1 ${active === 0 ? "opacity-20 pointer-events-none" : "opacity-60 hover:opacity-100"} transition-opacity`}
+          className={`absolute left-2 z-10 p-1 ${active === 0 ? "opacity-20 pointer-events-none" : "opacity-60 hover:opacity-100"} transition-opacity`}
         >
           <ChevronLeft className="w-6 h-6 text-foreground" />
         </button>
 
-        <div className="overflow-hidden w-[220px]">
+        <div className="overflow-x-hidden overflow-y-visible w-[220px]">
           <div
             className="flex transition-transform duration-300 ease-in-out"
             style={{ transform: `translateX(-${active * 220}px)` }}
           >
             {screens.map((screen, i) => (
-              <div key={i} className="w-[220px] flex-shrink-0 flex justify-center">
+              <div key={i} className="w-[220px] flex-shrink-0 flex justify-center py-2">
                 {screen}
               </div>
             ))}
@@ -223,14 +223,14 @@ const MobileCarousel = () => {
 
         <button
           onClick={() => setActive((p) => Math.min(2, p + 1))}
-          className={`absolute right-0 z-10 p-1 ${active === 2 ? "opacity-20 pointer-events-none" : "opacity-60 hover:opacity-100"} transition-opacity`}
+          className={`absolute right-2 z-10 p-1 ${active === 2 ? "opacity-20 pointer-events-none" : "opacity-60 hover:opacity-100"} transition-opacity`}
         >
           <ChevronRight className="w-6 h-6 text-foreground" />
         </button>
       </div>
 
       {/* Dots */}
-      <div className="flex justify-center gap-2 mt-4">
+      <div className="flex justify-center gap-2 mt-6">
         {[0, 1, 2].map((i) => (
           <button
             key={i}
