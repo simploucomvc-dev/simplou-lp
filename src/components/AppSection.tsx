@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import {
   Home, Package, CircleDollarSign, Search, Bell, Plus,
-  ArrowUpRight, ArrowDownRight, ShoppingCart, Truck
+  ArrowUpRight, ShoppingCart, Truck, ChevronLeft, ChevronRight
 } from "lucide-react";
 
 /* ── Shared tab bar ── */
