@@ -1,7 +1,8 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import {
   Home, Package, CircleDollarSign, Search, Bell, Plus,
-  ArrowUpRight, ArrowDownRight, ShoppingCart, Truck
+  ArrowUpRight, ShoppingCart, Truck, ChevronLeft, ChevronRight
 } from "lucide-react";
 
 /* ── Shared tab bar ── */
@@ -192,6 +193,58 @@ const OperationsScreen = () => (
   </PhoneShell>
 );
 
+/* ── Mobile Carousel ── */
+const MobileCarousel = () => {
+  const [active, setActive] = useState(1); // 0=Products, 1=Dashboard, 2=Operations
+  const screens = [<ProductsScreen />, <DashboardScreen />, <OperationsScreen />];
+
+  return (
+    <div className="sm:hidden mb-10">
+      <div className="relative flex items-center justify-center">
+        <button
+          onClick={() => setActive((p) => Math.max(0, p - 1))}
+          className={`absolute left-0 z-10 p-1 ${active === 0 ? "opacity-20 pointer-events-none" : "opacity-60 hover:opacity-100"} transition-opacity`}
+        >
+          <ChevronLeft className="w-6 h-6 text-foreground" />
+        </button>
+
+        <div className="overflow-hidden w-[220px]">
+          <div
+            className="flex transition-transform duration-300 ease-in-out"
+            style={{ transform: `translateX(-${active * 220}px)` }}
+          >
+            {screens.map((screen, i) => (
+              <div key={i} className="w-[220px] flex-shrink-0 flex justify-center">
+                {screen}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <button
+          onClick={() => setActive((p) => Math.min(2, p + 1))}
+          className={`absolute right-0 z-10 p-1 ${active === 2 ? "opacity-20 pointer-events-none" : "opacity-60 hover:opacity-100"} transition-opacity`}
+        >
+          <ChevronRight className="w-6 h-6 text-foreground" />
+        </button>
+      </div>
+
+      {/* Dots */}
+      <div className="flex justify-center gap-2 mt-4">
+        {[0, 1, 2].map((i) => (
+          <button
+            key={i}
+            onClick={() => setActive(i)}
+            className={`w-2 h-2 rounded-full transition-colors ${
+              i === active ? "bg-primary" : "bg-foreground/20"
+            }`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
 /* ── Section ── */
 const AppSection = () => (
   <section id="app" className="bg-section-alt section-padding">
@@ -210,21 +263,21 @@ const AppSection = () => (
         <p className="text-lg text-muted-foreground">Toda a gestão do seu negócio na palma da mão</p>
       </motion.div>
 
+      {/* Desktop: side by side */}
       <motion.div
-        className="flex items-end justify-center gap-4 md:gap-8 mb-10"
+        className="hidden sm:flex items-end justify-center gap-4 md:gap-8 mb-10"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.15 }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        <div className="hidden sm:block">
-          <ProductsScreen />
-        </div>
+        <ProductsScreen />
         <DashboardScreen />
-        <div className="hidden sm:block">
-          <OperationsScreen />
-        </div>
+        <OperationsScreen />
       </motion.div>
+
+      {/* Mobile: carousel */}
+      <MobileCarousel />
 
       <div className="text-center">
         <button className="border-2 border-primary text-foreground text-lg font-bold uppercase tracking-wider px-10 py-4 rounded-full hover:-translate-y-0.5 hover:shadow-md transition-all duration-200">
