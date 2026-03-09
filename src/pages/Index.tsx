@@ -4,7 +4,7 @@ import Definition from "@/components/Definition";
 import Services from "@/components/Services";
 import Timeline from "@/components/Timeline";
 // import AppSection from "@/components/AppSection";
-import FAQ from "@/components/FAQ";
+// import FAQ from "@/components/FAQ";
 // import DualCTA from "@/components/DualCTA";
 import LeadForm from "@/components/LeadForm";
 import Footer from "@/components/Footer";
