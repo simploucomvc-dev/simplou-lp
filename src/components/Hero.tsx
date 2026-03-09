@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import logo from "@/assets/simplou-logo.png";
 import logoMobile from "@/assets/simplou-logo-mobile.png";
 
-const TARGET_DATE = new Date("2025-03-13T03:00:00Z"); // 13/03 00:00 Belém (UTC-3)
+const TARGET_DATE = new Date("2026-03-13T03:00:00Z"); // 13/03/2026 00:00 Belém (UTC-3)
 
 const useCountdown = (target: Date) => {
   const calc = () => {
