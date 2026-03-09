@@ -18,7 +18,7 @@ const Services = () => (
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
         <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mb-2">O QUE FAZEMOS</h2>
-        <p className="text-lg text-muted-foreground mb-12">Consultoria completa para pequenos negócios</p>
+        <p className="text-lg text-muted-foreground mb-12">Aceleração de pequenos negócios</p>
       </motion.div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         {services.map((s, i) => (
