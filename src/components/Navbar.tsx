@@ -44,29 +44,21 @@ const Navbar = () => {
               scrolled ? "text-foreground/70 hover:text-foreground" : "text-background/80 hover:text-background"
             }`}
           >
-            Consultoria
+            O que fazemos
           </button>
           <button
-            onClick={() => scrollTo("app")}
+            onClick={() => scrollTo("como-funciona")}
             className={`text-[15px] font-semibold uppercase tracking-widest transition-colors ${
               scrolled ? "text-foreground/70 hover:text-foreground" : "text-background/80 hover:text-background"
             }`}
           >
-            App
+            Como funciona
           </button>
           <button
-            onClick={() => scrollTo("faq")}
-            className={`text-[15px] font-semibold uppercase tracking-widest transition-colors ${
-              scrolled ? "text-foreground/70 hover:text-foreground" : "text-background/80 hover:text-background"
-            }`}
-          >
-            FAQ
-          </button>
-          <button
-            onClick={() => scrollTo("cta")}
+            onClick={() => scrollTo("formulario")}
             className="bg-primary text-primary-foreground text-[15px] font-bold uppercase tracking-wider px-6 py-2.5 rounded-full hover:-translate-y-0.5 hover:shadow-md transition-all duration-200"
           >
-            Agendar
+            Inscreva-se
           </button>
         </div>
 
