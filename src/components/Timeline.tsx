@@ -23,7 +23,7 @@ const pillars = [
 ];
 
 const Timeline = () => (
-  <section className="bg-background section-padding">
+  <section id="como-funciona" className="bg-background section-padding">
     <div className="container">
       <motion.h2
         className="text-3xl md:text-4xl font-extrabold text-foreground text-center mb-14"
