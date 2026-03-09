@@ -1,11 +1,40 @@
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import logo from "@/assets/simplou-logo.png";
 import logoMobile from "@/assets/simplou-logo-mobile.png";
+
+const TARGET_DATE = new Date("2025-03-13T03:00:00Z"); // 13/03 00:00 Belém (UTC-3)
+
+const useCountdown = (target: Date) => {
+  const calc = () => {
+    const diff = Math.max(0, target.getTime() - Date.now());
+    return {
+      days: Math.floor(diff / 86400000),
+      hours: Math.floor((diff % 86400000) / 3600000),
+      minutes: Math.floor((diff % 3600000) / 60000),
+      seconds: Math.floor((diff % 60000) / 1000),
+    };
+  };
+  const [time, setTime] = useState(calc);
+  useEffect(() => {
+    const id = setInterval(() => setTime(calc), 1000);
+    return () => clearInterval(id);
+  }, []);
+  return time;
+};
 
 const Hero = () => {
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
+  const { days, hours, minutes, seconds } = useCountdown(TARGET_DATE);
+
+  const timeUnits = [
+    { label: "dias", value: days },
+    { label: "horas", value: hours },
+    { label: "min", value: minutes },
+    { label: "seg", value: seconds },
+  ];
 
   return (
     <section id="hero" className="bg-gradient-to-br from-primary to-[hsl(82,70%,42%)] min-h-screen flex items-center justify-center relative">
@@ -39,14 +68,34 @@ const Hero = () => {
           <span className="italic font-bold text-primary-foreground/80">Simplou, cresceu!</span>
         </motion.p>
         <motion.button
-          onClick={() => scrollTo("cta")}
+          onClick={() => scrollTo("formulario")}
           className="bg-brand-dark text-background text-sm md:text-lg font-bold uppercase tracking-wider px-8 py-3.5 md:px-12 md:py-5 rounded-full hover:-translate-y-0.5 hover:shadow-lg transition-all duration-200"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.5, ease: "easeOut" }}
         >
-          Quero simplificar meu negócio
+          Seja um dos primeiros a saber
         </motion.button>
+
+        {/* Countdown */}
+        <motion.div
+          className="mt-8 flex justify-center gap-3 md:gap-5"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8, duration: 0.5, ease: "easeOut" }}
+        >
+          {timeUnits.map(({ label, value }) => (
+            <div key={label} className="flex flex-col items-center">
+              <span className="text-3xl md:text-5xl font-extrabold text-primary-foreground tabular-nums">
+                {String(value).padStart(2, "0")}
+              </span>
+              <span className="text-[10px] md:text-xs text-primary-foreground/50 uppercase tracking-widest mt-1">
+                {label}
+              </span>
+            </div>
+          ))}
+        </motion.div>
+
         <motion.div
           className="mt-16 text-primary-foreground/40 text-xs uppercase tracking-widest"
           initial={{ opacity: 0 }}
