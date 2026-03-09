@@ -78,14 +78,13 @@ const Navbar = () => {
       {/* Mobile menu */}
       {menuOpen && (
         <div className="md:hidden bg-background border-t border-border px-6 py-6 flex flex-col gap-4">
-          <button onClick={() => scrollTo("servicos")} className="text-base font-semibold uppercase tracking-wider text-foreground/70 text-left">Consultoria</button>
-          <button onClick={() => scrollTo("app")} className="text-base font-semibold uppercase tracking-wider text-foreground/70 text-left">App</button>
-          <button onClick={() => scrollTo("faq")} className="text-base font-semibold uppercase tracking-wider text-foreground/70 text-left">FAQ</button>
+          <button onClick={() => scrollTo("servicos")} className="text-base font-semibold uppercase tracking-wider text-foreground/70 text-left">O que fazemos</button>
+          <button onClick={() => scrollTo("como-funciona")} className="text-base font-semibold uppercase tracking-wider text-foreground/70 text-left">Como funciona</button>
           <button
-            onClick={() => scrollTo("cta")}
+            onClick={() => scrollTo("formulario")}
             className="bg-primary text-primary-foreground text-base font-bold uppercase tracking-wider px-6 py-3 rounded-full text-center mt-2"
           >
-            Agendar
+            Inscreva-se
           </button>
         </div>
       )}

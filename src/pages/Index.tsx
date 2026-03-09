@@ -17,7 +17,7 @@ const Index = () => (
     <Services />
     <Timeline />
     {/* <AppSection /> */}
-    <FAQ />
+    {/* <FAQ /> */}
     {/* <DualCTA /> */}
     <LeadForm />
     <Footer />
