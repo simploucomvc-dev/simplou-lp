@@ -88,7 +88,7 @@ const LeadForm = () => {
             Seja um dos primeiros
           </h2>
           <p className="text-lg text-muted-foreground">
-            Deixe seus dados e saiba antes de todo mundo
+            Preencha abaixo e fique por dentro antes de todo mundo
           </p>
         </motion.div>
 
