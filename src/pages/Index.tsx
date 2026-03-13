@@ -7,18 +7,20 @@ import AppSection from "@/components/AppSection";
 import FAQ from "@/components/FAQ";
 import DualCTA from "@/components/DualCTA";
 import Footer from "@/components/Footer";
+import FloatingCTA from "@/components/FloatingCTA";
 
 const Index = () => (
   <>
     <Navbar />
     <Hero />
+    <AppSection />
     <Definition />
     <Services />
     <Timeline />
-    <AppSection />
     <DualCTA />
     <FAQ />
     <Footer />
+    <FloatingCTA />
   </>
 );
 

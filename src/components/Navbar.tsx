@@ -55,7 +55,7 @@ const Navbar = () => {
             Como funciona
           </button>
           <a
-            href="https://simplou.app.br/login"
+            href="https://simplou.app.br/registro"
             className="bg-primary text-primary-foreground text-[15px] font-bold uppercase tracking-wider px-6 py-2.5 rounded-full hover:-translate-y-0.5 hover:shadow-md transition-all duration-200"
           >
             Inscreva-se
@@ -81,7 +81,7 @@ const Navbar = () => {
           <button onClick={() => scrollTo("servicos")} className="text-base font-semibold uppercase tracking-wider text-foreground/70 text-left">O que fazemos</button>
           <button onClick={() => scrollTo("como-funciona")} className="text-base font-semibold uppercase tracking-wider text-foreground/70 text-left">Como funciona</button>
           <a
-            href="https://simplou.app.br/login"
+            href="https://simplou.app.br/registro"
             className="bg-primary text-primary-foreground text-base font-bold uppercase tracking-wider px-6 py-3 rounded-full text-center mt-2"
           >
             Inscreva-se
