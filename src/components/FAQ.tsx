@@ -10,8 +10,9 @@ const faqs = [
   { q: "Quanto custa a consultoria?", a: "Entre em contato para um diagnóstico gratuito. Nossos planos são acessíveis para pequenos negócios." },
   { q: "Funciona para qualquer tipo de negócio?", a: "Sim! Trabalhamos com comércios, serviços, alimentação, beleza e qualquer pequena operação que queira se profissionalizar." },
   { q: "Quanto tempo leva para ver resultados?", a: "Já nas primeiras semanas você terá clareza sobre seus números. Resultados consistentes aparecem em 30 a 90 dias." },
-  { q: "O app é gratuito para clientes da consultoria?", a: "Clientes da consultoria terão acesso prioritário e condições especiais no lançamento." },
   { q: "Como funciona o acompanhamento?", a: "Fazemos reuniões periódicas para acompanhar indicadores, ajustar metas e garantir que o negócio siga no rumo certo." },
+  { q: "O que eu consigo fazer no App Simplou?", a: "Cadastrar produtos e serviços com custo e preço de venda — o app calcula o lucro automaticamente. Registrar receitas e despesas, acompanhar o faturamento no Dashboard e exportar relatórios em PDF ou CSV." },
+  { q: "Preciso entender de finanças para usar o app?", a: "Não. O Simplou foi feito pra quem não tem tempo (nem paciência) pra planilha. Tudo é simples, direto e visual." },
 ];
 
 const FAQ = () => (

@@ -54,12 +54,12 @@ const Navbar = () => {
           >
             Como funciona
           </button>
-          <button
-            onClick={() => scrollTo("formulario")}
+          <a
+            href="https://simplou.app.br/login"
             className="bg-primary text-primary-foreground text-[15px] font-bold uppercase tracking-wider px-6 py-2.5 rounded-full hover:-translate-y-0.5 hover:shadow-md transition-all duration-200"
           >
             Inscreva-se
-          </button>
+          </a>
         </div>
 
         {/* Mobile hamburger */}
@@ -80,12 +80,12 @@ const Navbar = () => {
         <div className="md:hidden bg-background border-t border-border px-6 py-6 flex flex-col gap-4">
           <button onClick={() => scrollTo("servicos")} className="text-base font-semibold uppercase tracking-wider text-foreground/70 text-left">O que fazemos</button>
           <button onClick={() => scrollTo("como-funciona")} className="text-base font-semibold uppercase tracking-wider text-foreground/70 text-left">Como funciona</button>
-          <button
-            onClick={() => scrollTo("formulario")}
+          <a
+            href="https://simplou.app.br/login"
             className="bg-primary text-primary-foreground text-base font-bold uppercase tracking-wider px-6 py-3 rounded-full text-center mt-2"
           >
             Inscreva-se
-          </button>
+          </a>
         </div>
       )}
     </nav>

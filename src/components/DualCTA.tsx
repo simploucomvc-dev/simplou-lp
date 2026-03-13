@@ -15,9 +15,14 @@ const DualCTA = () => (
           <p className="text-base text-muted-foreground mb-8">
             Agende uma conversa gratuita e descubra como organizar seu negócio
           </p>
-          <button className="bg-primary text-primary-foreground text-lg font-bold uppercase tracking-wider px-10 py-4 rounded-full hover:-translate-y-0.5 hover:shadow-md transition-all duration-200">
+          <a
+            href="https://forms.gle/d16an3tHNrD1kwmv8"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-primary text-primary-foreground text-lg font-bold uppercase tracking-wider px-10 py-4 rounded-full hover:-translate-y-0.5 hover:shadow-md transition-all duration-200"
+          >
             Agendar agora
-          </button>
+          </a>
         </motion.div>
         <motion.div
           className="border border-border p-10 text-center hover:-translate-y-1 hover:shadow-md transition-all duration-250"
@@ -28,11 +33,14 @@ const DualCTA = () => (
         >
           <h3 className="text-xl font-bold text-foreground mb-2">App Simplou</h3>
           <p className="text-base text-muted-foreground mb-8">
-            Entre na lista de espera e seja o primeiro a usar quando lançar
+            Acesse agora e gerencie seu negócio de onde estiver
           </p>
-          <button className="border-2 border-primary text-foreground text-lg font-bold uppercase tracking-wider px-10 py-4 rounded-full hover:-translate-y-0.5 hover:shadow-md transition-all duration-200">
-            Lista de espera
-          </button>
+          <a
+            href="https://simplou.app.br/login"
+            className="inline-block border-2 border-primary text-foreground text-lg font-bold uppercase tracking-wider px-10 py-4 rounded-full hover:-translate-y-0.5 hover:shadow-md transition-all duration-200"
+          >
+            Acessar agora
+          </a>
         </motion.div>
       </div>
     </div>
