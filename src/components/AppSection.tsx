@@ -87,10 +87,14 @@ const AppSection = () => (
       >
         <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mb-2">App Simplou</h2>
         <p className="text-lg text-muted-foreground mb-6">Toda a gestão do seu negócio na palma da mão</p>
-        <p className="text-base text-muted-foreground max-w-lg mx-auto leading-relaxed text-center">
+        <p className="text-base text-muted-foreground max-w-lg mx-auto leading-relaxed text-center mb-4">
           Cadastre produtos e serviços, controle entradas e saídas e acompanhe seu lucro em tempo real.{" "}
           <span className="font-semibold text-foreground">Sem planilha, sem complicação.</span>
         </p>
+        <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 text-foreground text-sm font-medium px-4 py-2 rounded-full">
+          <span className="w-2 h-2 rounded-full bg-primary inline-block" />
+          7 dias grátis · Sem cartão · Sem compromisso
+        </div>
       </motion.div>
 
       {/* Desktop: side by side */}
