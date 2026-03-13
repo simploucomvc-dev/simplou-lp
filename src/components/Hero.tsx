@@ -33,15 +33,15 @@ const Hero = () => (
         A gente acredita que organizar o negócio pode ser simples, leve e até divertido.{" "}
         <span className="italic font-bold text-primary-foreground/80">Simplou, cresceu!</span>
       </motion.p>
-      <motion.a
-        href="https://simplou.app.br/login"
-        className="inline-block bg-brand-dark text-background text-sm md:text-lg font-bold uppercase tracking-wider px-8 py-3.5 md:px-12 md:py-5 rounded-full hover:-translate-y-0.5 hover:shadow-lg transition-all duration-200"
+      <motion.button
+        onClick={() => document.getElementById("app")?.scrollIntoView({ behavior: "smooth" })}
+        className="bg-brand-dark text-background text-sm md:text-lg font-bold uppercase tracking-wider px-8 py-3.5 md:px-12 md:py-5 rounded-full hover:-translate-y-0.5 hover:shadow-lg transition-all duration-200"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.6, duration: 0.5, ease: "easeOut" }}
       >
         Quero organizar meu negócio agora
-      </motion.a>
+      </motion.button>
 
       <motion.div
         className="mt-16 text-primary-foreground/40 text-xs uppercase tracking-widest"
