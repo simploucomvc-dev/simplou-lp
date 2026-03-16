@@ -6,6 +6,7 @@ import Timeline from "@/components/Timeline";
 import AppSection from "@/components/AppSection";
 import FAQ from "@/components/FAQ";
 import DualCTA from "@/components/DualCTA";
+import PricingSection from "@/components/PricingSection";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 
@@ -18,6 +19,7 @@ const Index = () => (
     <Services />
     <Timeline />
     <DualCTA />
+    {/* <PricingSection /> */}
     <FAQ />
     <Footer />
     <FloatingCTA />

@@ -95,6 +95,7 @@ const AppSection = () => (
           <span className="w-2 h-2 rounded-full bg-primary inline-block" />
           7 dias grátis · Sem cartão · Sem compromisso
         </div>
+        <p className="text-sm text-muted-foreground mt-2">Depois apenas R$ 19,90/mês</p>
       </motion.div>
 
       {/* Desktop: side by side */}
