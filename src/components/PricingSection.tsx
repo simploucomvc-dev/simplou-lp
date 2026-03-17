@@ -65,20 +65,23 @@ export default function PricingSection() {
           transition={{ duration: 0.5, delay: 0.1 }}
         >
           {/* Card header */}
-          <div className="bg-primary px-8 py-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-            <div>
-              <p className="text-sm font-medium text-foreground/60 mb-1">App Simplou</p>
-              <h3 className="text-2xl font-bold text-foreground">Plano Completo</h3>
-              <p className="text-foreground/70 text-sm mt-1">
-                7 dias grátis · Sem cartão · Sem compromisso
-              </p>
+          <div className="bg-primary px-8 py-8 flex flex-col gap-4">
+            <div className="flex items-start justify-between gap-4">
+              <div>
+                <p className="text-xs font-medium text-foreground/50 mb-1">App Simplou</p>
+                <h3 className="text-2xl font-bold text-foreground">Plano Completo</h3>
+              </div>
+              <div className="text-right shrink-0">
+                <p className="text-foreground/60 text-xs mb-0.5">depois dos 7 dias</p>
+                <p className="text-2xl font-extrabold leading-none text-foreground">
+                  R$&nbsp;19<span className="text-lg">,90</span>
+                </p>
+                <p className="text-foreground/60 text-xs">/ mês</p>
+              </div>
             </div>
-            <div className="text-left sm:text-right shrink-0">
-              <p className="text-foreground/60 text-xs mb-0.5">depois dos 7 dias</p>
-              <p className="text-4xl font-extrabold leading-none text-foreground">
-                R$&nbsp;19<span className="text-2xl">,90</span>
-              </p>
-              <p className="text-foreground/60 text-sm">por mês</p>
+            <div className="inline-flex items-center gap-2 bg-white/40 text-foreground text-sm font-bold px-4 py-2.5 rounded-full self-start">
+              <span className="w-2 h-2 rounded-full bg-foreground inline-block" />
+              7 dias grátis · Sem cartão · Sem compromisso
             </div>
           </div>
 

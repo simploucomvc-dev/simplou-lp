@@ -19,7 +19,7 @@ const Index = () => (
     <Services />
     <Timeline />
     <DualCTA />
-    {/* <PricingSection /> */}
+    <PricingSection />
     <FAQ />
     <Footer />
     <FloatingCTA />
