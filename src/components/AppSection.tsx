@@ -93,9 +93,8 @@ const AppSection = () => (
         </p>
         <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 text-foreground text-sm font-medium px-4 py-2 rounded-full">
           <span className="w-2 h-2 rounded-full bg-primary inline-block" />
-          7 dias grátis · Sem cartão · Sem compromisso
+          Apenas R$ 19,90/mês
         </div>
-        <p className="text-sm text-muted-foreground mt-2">Depois apenas R$ 19,90/mês</p>
       </motion.div>
 
       {/* Desktop: side by side */}

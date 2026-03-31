@@ -27,7 +27,7 @@ const Definition = () => (
 
         <p className="text-sm font-bold uppercase tracking-wider text-muted-foreground mb-2">ex.:</p>
         <p className="text-base italic text-muted-foreground pl-4">
-          "Depois da consultoria, ele simplou o negócio e começou a ter lucro todo mês."
+          "Depois de usar o Simplou, ele simplou o negócio e começou a ter lucro todo mês."
         </p>
       </motion.div>
     </div>

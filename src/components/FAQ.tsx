@@ -7,12 +7,12 @@ import {
 } from "@/components/ui/accordion";
 
 const faqs = [
-  { q: "Quanto custa a consultoria?", a: "Entre em contato para um diagnóstico gratuito. Nossos planos são acessíveis para pequenos negócios." },
-  { q: "Funciona para qualquer tipo de negócio?", a: "Sim! Trabalhamos com comércios, serviços, alimentação, beleza e qualquer pequena operação que queira se profissionalizar." },
-  { q: "Quanto tempo leva para ver resultados?", a: "Já nas primeiras semanas você terá clareza sobre seus números. Resultados consistentes aparecem em 30 a 90 dias." },
-  { q: "Como funciona o acompanhamento?", a: "Fazemos reuniões periódicas para acompanhar indicadores, ajustar metas e garantir que o negócio siga no rumo certo." },
-  { q: "O que eu consigo fazer no App Simplou?", a: "Cadastrar produtos e serviços com custo e preço de venda — o app calcula o lucro automaticamente. Registrar receitas e despesas, acompanhar o faturamento no Dashboard e exportar relatórios em PDF ou CSV." },
-  { q: "Preciso entender de finanças para usar o app?", a: "Não. O Simplou foi feito pra quem não tem tempo (nem paciência) pra planilha. Tudo é simples, direto e visual." },
+  { q: "O que eu consigo fazer no App Simplou?", a: "Cadastrar produtos e serviços com custos reais, registrar receitas e despesas, acompanhar lucro e faturamento no Dashboard e exportar dados em CSV. Tudo em um só lugar, sem planilha." },
+  { q: "Preciso entender de finanças para usar o app?", a: "Não. O Simplou foi feito pra quem não tem tempo (nem paciência) pra planilha. Tudo é simples, direto e visual. Um tour guiado aparece no primeiro acesso para explicar cada módulo." },
+  { q: "O Simplou funciona para quem vende em marketplace?", a: "Sim. Você pode cadastrar as taxas e comissões de plataformas como Shopee e Mercado Livre como custos variáveis. O app desconta tudo e mostra seu lucro real por produto." },
+  { q: "Posso controlar custos em dólar?", a: "Sim. O Simplou suporta valores em USD com cotação automática, ideal para quem importa insumos ou paga ferramentas em dólar." },
+  { q: "Como funciona o cálculo de lucro?", a: "O Simplou considera custos fixos (embalagem, aluguel, energia) e custos variáveis (taxas, frete, comissões) de cada produto. Assim você vê o lucro real — não só a diferença entre receita e despesa." },
+  { q: "Como funciona o pagamento?", a: "Assinatura mensal de R$ 19,90, cobrada via cartão de crédito pelo Stripe. Sem contrato, sem fidelidade — cancele quando quiser." },
 ];
 
 const FAQ = () => (

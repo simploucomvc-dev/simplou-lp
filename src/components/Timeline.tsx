@@ -1,24 +1,24 @@
 import { motion } from "framer-motion";
-import { Wallet, Settings2, LineChart } from "lucide-react";
+import { PackagePlus, ReceiptText, TrendingUp } from "lucide-react";
 
-const pillars = [
+const steps = [
   {
-    icon: Wallet,
-    title: "Caixa Organizado",
-    desc: "Separar conta pessoal da empresa, registrar entradas e saídas, saber faturamento, custo, lucro e caixa, precificar com margem, manter caixa positivo.",
-    rule: "Empresa que não mede dinheiro, quebra.",
+    icon: PackagePlus,
+    title: "Cadastre seus produtos e custos",
+    desc: "Adicione produtos ou serviços com todos os custos envolvidos — fixos, variáveis, taxas de marketplace, insumos em dólar. O app sugere o preço de venda com markup automático.",
+    rule: "Vender sem saber o custo real é trabalhar de graça.",
   },
   {
-    icon: Settings2,
-    title: "Operação Clara",
-    desc: "Funções definidas, checklist diário, processos padronizados, menos improviso, negócio funcionando sem o dono.",
-    rule: "O negócio precisa funcionar mesmo sem você.",
+    icon: ReceiptText,
+    title: "Registre receitas e despesas",
+    desc: "Lance movimentações financeiras, crie parcelas recorrentes com um clique e anexe comprovantes direto na transação. Tudo em um lugar, sem planilha.",
+    rule: "O que não é registrado, não é gerenciado.",
   },
   {
-    icon: LineChart,
-    title: "Informação para Decidir",
-    desc: "Metas mensais, indicadores semanais, reuniões de acompanhamento, planejamento trimestral, decisões com números.",
-    rule: "O que não é medido, não melhora.",
+    icon: TrendingUp,
+    title: "Acompanhe seu lucro",
+    desc: "Veja no Dashboard se está lucrando de verdade. Gráfico de evolução mensal, composição de receitas e previsão de entradas futuras já lançadas.",
+    rule: "Número na tela muda decisão na prática.",
   },
 ];
 
@@ -32,12 +32,12 @@ const Timeline = () => (
         viewport={{ once: true, amount: 0.15 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        TRIPÉ PARA PROSPERAR
+        COMO FUNCIONA
       </motion.h2>
       <div className="relative max-w-xl mx-auto">
         <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-border" />
 
-        {pillars.map((p, i) => (
+        {steps.map((p, i) => (
           <motion.div
             key={p.title}
             className="flex gap-6 mb-12 last:mb-0 relative"

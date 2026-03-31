@@ -72,16 +72,12 @@ export default function PricingSection() {
                 <h3 className="text-2xl font-bold text-foreground">Plano Completo</h3>
               </div>
               <div className="text-right shrink-0">
-                <p className="text-foreground/60 text-xs mb-0.5">depois dos 7 dias</p>
+                <p className="text-foreground/60 text-xs mb-0.5">por mês</p>
                 <p className="text-2xl font-extrabold leading-none text-foreground">
                   R$&nbsp;19<span className="text-lg">,90</span>
                 </p>
                 <p className="text-foreground/60 text-xs">/ mês</p>
               </div>
-            </div>
-            <div className="inline-flex items-center gap-2 bg-white/40 text-foreground text-sm font-bold px-4 py-2.5 rounded-full self-start">
-              <span className="w-2 h-2 rounded-full bg-foreground inline-block" />
-              7 dias grátis · Sem cartão · Sem compromisso
             </div>
           </div>
 
@@ -123,7 +119,7 @@ export default function PricingSection() {
               rel="noopener noreferrer"
               className="block w-full text-center bg-foreground hover:bg-foreground/80 text-white font-bold text-base py-4 rounded-xl transition-colors duration-200"
             >
-              Começar grátis por 7 dias
+              Começar agora
             </a>
             <p className="text-center text-xs text-muted-foreground mt-3">
               Não é necessário cartão de crédito para começar.

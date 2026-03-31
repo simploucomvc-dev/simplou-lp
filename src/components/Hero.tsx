@@ -29,8 +29,8 @@ const Hero = () => (
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 0.5, ease: "easeOut" }}
       >
-        Empreender já é bem complicado pra gestão ainda ter que ser um peso.
-        A gente acredita que organizar o negócio pode ser simples, leve e até divertido.{" "}
+        Descubra se o seu negócio está lucrando de verdade. Controle custos,
+        precifique certo e acompanhe o resultado — tudo em um app simples.{" "}
         <span className="italic font-bold text-primary-foreground/80">Simplou, cresceu!</span>
       </motion.p>
       <motion.button

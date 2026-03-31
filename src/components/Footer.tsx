@@ -11,7 +11,7 @@ const Footer = () => {
         <p className="text-lg font-bold text-background mb-4 tracking-tight">simplou.</p>
         <div className="flex gap-6 justify-center mb-4">
           {[
-            { label: "Consultoria", id: "servicos" },
+            { label: "Funcionalidades", id: "servicos" },
             { label: "App", id: "app" },
             { label: "FAQ", id: "faq" },
             { label: "Contato", id: "cta" },

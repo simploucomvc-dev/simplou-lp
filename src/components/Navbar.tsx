@@ -44,7 +44,7 @@ const Navbar = () => {
               scrolled ? "text-foreground/70 hover:text-foreground" : "text-background/80 hover:text-background"
             }`}
           >
-            O que fazemos
+            Funcionalidades
           </button>
           <button
             onClick={() => scrollTo("como-funciona")}
@@ -78,7 +78,7 @@ const Navbar = () => {
       {/* Mobile menu */}
       {menuOpen && (
         <div className="md:hidden bg-background border-t border-border px-6 py-6 flex flex-col gap-4">
-          <button onClick={() => scrollTo("servicos")} className="text-base font-semibold uppercase tracking-wider text-foreground/70 text-left">O que fazemos</button>
+          <button onClick={() => scrollTo("servicos")} className="text-base font-semibold uppercase tracking-wider text-foreground/70 text-left">Funcionalidades</button>
           <button onClick={() => scrollTo("como-funciona")} className="text-base font-semibold uppercase tracking-wider text-foreground/70 text-left">Como funciona</button>
           <a
             href="https://simplou.app.br/registro"
