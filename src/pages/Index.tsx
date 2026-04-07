@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import HeadsCarousel from "@/components/HeadsCarousel";
 import Definition from "@/components/Definition";
 import Services from "@/components/Services";
 import Timeline from "@/components/Timeline";
@@ -14,6 +15,7 @@ const Index = () => (
   <>
     <Navbar />
     <Hero />
+    <HeadsCarousel />
     <AppSection />
     <Definition />
     <Services />
